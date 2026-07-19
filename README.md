@@ -32,7 +32,7 @@ Donde $\vec{v}_{\text{desired}}$ representa la velocidad ideal según la regla a
 
 ---
 
-## ⚡ Optimizaciones Clave de Rendimiento
+## Optimizaciones Clave de Rendimiento
 
 1. **Gestión de Memoria (Anti-Garbage Collector):** En lugar de crear miles de vectores nuevos por segundo usando `.clone()` dentro del bucle doble de animación, el script implementa un *pool* estático de vectores temporales (`scratchV1`, `scratchV2`, etc.). Esto erradica los micro-tirones y congelamientos del navegador.
 2. **Animación Asíncrona en GPU:** Para cumplir con el requerimiento de que las entidades se muevan de forma independiente, se inyectó un atributo personalizado por instancia (`aInstancePhase`) directamente en el buffer de la tarjeta gráfica. El Vertex Shader calcula la deformación sinoidal de los vértices desfasando el tiempo global:
@@ -43,7 +43,7 @@ Donde $\vec{v}_{\text{desired}}$ representa la velocidad ideal según la regla a
 
 ---
 
-## 📂 Estructura del Repositorio
+## Estructura del Repositorio
 
 ```text
 entrega-enjambre/
